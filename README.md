@@ -12,12 +12,11 @@
 
 Pesquisa ofensiva, ferramentas abertas e conhecimento técnico para fortalecer a segurança no mundo real.
 
-[![Status](https://img.shields.io/badge/status-em%20construção-111111?style=for-the-badge)](#roadmap)
 [![Security Research](https://img.shields.io/badge/security-research-111111?style=for-the-badge&logo=hackthebox&logoColor=white)](#o-que-você-encontrará-aqui)
 [![License MIT](https://img.shields.io/badge/license-MIT-111111?style=for-the-badge)](LICENSE)
 [![X](https://img.shields.io/badge/@00infosec-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/00infosec)
 
-[Sobre](#sobre-a-00infosec) • [Projetos](#o-que-você-encontrará-aqui) • [Roadmap](#roadmap) • [Segurança](SECURITY.md) • [Contribuir](CONTRIBUTING.md)
+[Sobre](#sobre-a-00infosec) • [Projetos](#o-que-você-encontrará-aqui) • [Segurança](SECURITY.md) • [Contribuir](CONTRIBUTING.md)
 
 </div>
 
@@ -52,28 +51,6 @@ Transformamos pesquisa ofensiva em conhecimento prático e defensável, combinan
     <td width="25%" align="center"><strong>🛡️ Defesa</strong><br><sub>Toda pesquisa deve contribuir também para detecção ou mitigação.</sub></td>
   </tr>
 </table>
-
-## Estrutura
-
-```text
-00infosec/
-├── advisories/     # Comunicados e divulgações coordenadas
-├── assets/         # Identidade visual do projeto
-├── cves/           # Pesquisas e artefatos relacionados a CVEs
-├── docs/           # Guias, laboratórios e materiais técnicos
-└── tools/          # Ferramentas e utilitários públicos
-```
-
-Cada publicação deverá apresentar contexto, escopo, compatibilidade, instruções, limitações conhecidas e considerações de segurança.
-
-## Roadmap
-
-- [x] Criar a base institucional do repositório
-- [x] Definir política de segurança e contribuição
-- [ ] Publicar as primeiras ferramentas da 00infosec
-- [ ] Adicionar análises técnicas de CVEs
-- [ ] Disponibilizar laboratórios e materiais educacionais
-- [ ] Publicar detecções e recomendações defensivas
 
 ## Uso responsável
 
