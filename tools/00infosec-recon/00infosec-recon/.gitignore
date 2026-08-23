@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Ambientes
+.venv/
+venv/
+.env
+
+# Saídas de scan (nunca commitar achados!)
+infosec_out/
+*_out/
+mcp_smoke_out/
+ci_out/
+test_out/
+
+# IDE / SO
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
+
+# opencode local
+opencode.json
+.opencode/
+
+# Estado efêmero de sessões locais
+_last_sid.txt
