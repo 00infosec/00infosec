@@ -4,7 +4,7 @@ Ferramentas e utilitários públicos da 00infosec. Cada projeto deve possuir doc
 
 ## Projetos
 
-### [00INFOSEC RECON](00infosec-recon/00infosec-recon)
+### [00INFOSEC RECON](https://github.com/00infosec/00infosec-recon)
 
 Framework assíncrono de OSINT e mapeamento de superfície de ataque, com módulos plugáveis, controle de escopo anti-SSRF, correlação de CVEs, relatórios HTML/Markdown/SARIF e integração MCP.
 
