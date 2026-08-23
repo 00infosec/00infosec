@@ -34,21 +34,21 @@ Transformamos pesquisa ofensiva em conhecimento prático e defensável, combinan
 
 | Área | Conteúdo |
 |:---:|---|
-| 🛠️ **Tools** | Ferramentas para segurança ofensiva, automação, reconhecimento e apoio a operações de Red Team. |
-| 🧬 **CVEs** | Pesquisas, análises técnicas, linhas do tempo, impacto, detecção e mitigação de vulnerabilidades. |
-| 📢 **Advisories** | Comunicados públicos e divulgações coordenadas de falhas de segurança. |
-| 🧪 **Labs** | Ambientes controlados, provas de conceito seguras e exemplos reprodutíveis. |
-| 📚 **Knowledge** | Documentação, estudos de OPSEC, simulação de adversários e materiais educacionais. |
-| 🛡️ **Defense** | Indicadores, regras de detecção e recomendações práticas de mitigação. |
+| **TOOLS** | Ferramentas para segurança ofensiva, automação, reconhecimento e apoio a operações de Red Team. |
+| **CVEs** | Pesquisas, análises técnicas, linhas do tempo, impacto, detecção e mitigação de vulnerabilidades. |
+| **ADVISORIES** | Comunicados públicos e divulgações coordenadas de falhas de segurança. |
+| **LABS** | Ambientes controlados, provas de conceito seguras e exemplos reprodutíveis. |
+| **KNOWLEDGE** | Documentação, estudos de OPSEC, simulação de adversários e materiais educacionais. |
+| **DEFENSE** | Indicadores, regras de detecção e recomendações práticas de mitigação. |
 
 ## Pilares
 
 <table>
   <tr>
-    <td width="25%" align="center"><strong>🎯 Autorização</strong><br><sub>Somente ambientes próprios, laboratórios ou sistemas com autorização explícita.</sub></td>
-    <td width="25%" align="center"><strong>🤝 Divulgação</strong><br><sub>Coordenação responsável antes de qualquer publicação sensível.</sub></td>
-    <td width="25%" align="center"><strong>🔬 Reprodutibilidade</strong><br><sub>Escopo, requisitos, evidências, limitações e validação documentados.</sub></td>
-    <td width="25%" align="center"><strong>🛡️ Defesa</strong><br><sub>Toda pesquisa deve contribuir também para detecção ou mitigação.</sub></td>
+    <td width="25%" align="center"><strong>AUTORIZAÇÃO</strong><br><sub>Somente ambientes próprios, laboratórios ou sistemas com autorização explícita.</sub></td>
+    <td width="25%" align="center"><strong>DIVULGAÇÃO</strong><br><sub>Coordenação responsável antes de qualquer publicação sensível.</sub></td>
+    <td width="25%" align="center"><strong>REPRODUTIBILIDADE</strong><br><sub>Escopo, requisitos, evidências, limitações e validação documentados.</sub></td>
+    <td width="25%" align="center"><strong>DEFESA</strong><br><sub>Toda pesquisa deve contribuir também para detecção ou mitigação.</sub></td>
   </tr>
 </table>
 
