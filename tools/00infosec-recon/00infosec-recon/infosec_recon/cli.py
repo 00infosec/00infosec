@@ -49,7 +49,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--baseline", metavar="SCAN_JSON",
                    help="compara com scan.json anterior (NOVO/RESOLVIDO/ALTERADO)")
     p.add_argument("--allow-private", action="store_true",
-                   help="permite alvos em IPs privados/loopback (default: bloqueado)")
+                   help="permite IPs privados; loopback permanece bloqueado")
     p.add_argument("--exclude-host", default="",
                    help="hosts excluidos do escopo, separados por virgula")
     p.add_argument("--include-sensitive", action="store_true",

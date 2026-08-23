@@ -1,26 +1,43 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/00infosec/00infosec/main/assets/logo-dark.png" alt="00infosec" width="180">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/00infosec/00infosec/main/assets/logo-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/00infosec/00infosec/main/assets/logo-light.png">
+  <img src="https://raw.githubusercontent.com/00infosec/00infosec/main/assets/logo-light.png" alt="00infosec" width="200">
+</picture>
 
 # 00INFOSEC RECON
 
-**OSINT · Attack Surface Management · Security Research**
+### OSINT · Attack Surface Management · Security Research
+
+Reconhecimento unificado com resultados confiáveis, explicáveis e reproduzíveis.
 
 [![CI](https://github.com/00infosec/00infosec/actions/workflows/00infosec-recon-ci.yml/badge.svg)](https://github.com/00infosec/00infosec/actions/workflows/00infosec-recon-ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-111111?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-111111?style=flat-square)](LICENSE)
 
+[Visão geral](#visão-geral) · [Instalação](#instalação) · [Uso](#uso) · [Módulos](#módulos) · [Outputs](#outputs) · [Arquitetura](#arquitetura) · [Segurança](#escopo-e-segurança-anti-ssrf)
+
 </div>
 
-> Framework unificado de OSINT e mapeamento de superfície de ataque.
-> Foco: **achados confiáveis, explicáveis e reproduzíveis** — não quantidade de fontes.
-> Um processo, um client HTTP, módulos plugáveis com DAG, escopo anti-SSRF e servidor MCP.
+## Visão geral
 
-**Status:** v0.2.0 · Python 3.10+ · Windows/Linux/macOS
+O **00INFOSEC RECON** reúne descoberta de ativos, análise de superfície de ataque e enriquecimento de vulnerabilidades em um único pipeline assíncrono. A arquitetura compartilha contexto, cliente HTTP, controle de escopo e modelo de achados entre todos os módulos.
+
+<table>
+  <tr>
+    <td width="25%" align="center"><strong>PRECISÃO</strong><br><sub>Confiança e evidência explícitas em cada resultado.</sub></td>
+    <td width="25%" align="center"><strong>SEGURANÇA</strong><br><sub>Escopo anti-SSRF e mascaramento de dados sensíveis.</sub></td>
+    <td width="25%" align="center"><strong>AUTOMAÇÃO</strong><br><sub>CLI, SARIF, baseline e integração MCP.</sub></td>
+    <td width="25%" align="center"><strong>PORTABILIDADE</strong><br><sub>Python 3.10+ em Windows, Linux e macOS.</sub></td>
+  </tr>
+</table>
+
+> O projeto prioriza qualidade de evidência e uso autorizado, não volume de fontes.
 
 ---
 
-## Precisão antes de tudo: observation / candidate / finding
+## Modelo de resultados
 
 Cada achado carrega um **status** e uma **confiança** explícitos:
 
@@ -69,6 +86,19 @@ independente de flags.
 
 ## Instalação
 
+### Início rápido
+
+```bash
+git clone https://github.com/00infosec/00infosec.git
+cd 00infosec/tools/00infosec-recon/00infosec-recon
+python -m pip install -e ".[full]"
+python -m infosec_recon example.com -p passive
+```
+
+O perfil `passive` não realiza conexões diretas ao alvo e é o ponto de partida recomendado para conhecer a ferramenta.
+
+### Opções de instalação
+
 ```bash
 git clone https://github.com/00infosec/00infosec.git
 cd 00infosec/tools/00infosec-recon/00infosec-recon
@@ -90,7 +120,7 @@ python -m infosec_recon <dominio> [opcoes]
 # exemplos
 python -m infosec_recon example.com.br                    # profile default (6 módulos)
 python -m infosec_recon example.com.br --deep             # + brute/permute/takeover/internetdb full
-python -m infosec_recon banco.b.br -p quick               # recon+leakhunt+cloudhunt
+python -m infosec_recon banco.b.br -p quick               # recon + leakhunt
 python -m infosec_recon example.com.br --only recon,cvescan
 python -m infosec_recon example.com.br --skip phishlab
 python -m infosec_recon alvo1.com.br alvo2.b.br           # multi-target sequencial
@@ -123,7 +153,7 @@ python -m infosec_recon --list-modules
 
 | flag | descrição |
 |---|---|
-| `-p, --profile` | `quick` · `default` · `deep` |
+| `-p, --profile` | `quick` · `default` · `deep` · `passive` |
 | `--only` | executa só os módulos listados (dependências são puxadas automaticamente) |
 | `--skip` | pula módulos |
 | `--deep` | recon: DNS brute (~90 prefixos) + permutações + takeover checks + InternetDB completo |
@@ -319,16 +349,8 @@ python tests/test_core.py        # unit (também roda com pytest)
 python tests/mcp_smoke_ci.py     # handshake MCP + tools/list
 ```
 
-CI no GitHub Actions (`.github/workflows/ci.yml`): lint (ruff errors-only),
-unit tests, CLI smoke e MCP smoke — matriz Ubuntu/Windows × Python 3.11/3.13.
-
----
-
-## Roadmap
-
-- [ ] modo `watch` com CertStream (`wss://certstream.calidog.io`)
-- [ ] correlação cross-module (secret em JS no host X que roda CVE Y)
-- [ ] exportação de relatórios em PDF
+CI no GitHub Actions (`.github/workflows/00infosec-recon-ci.yml`): lint,
+testes unitários, CLI smoke e MCP smoke em Ubuntu e Windows com Python 3.10 a 3.13.
 
 ## Contribuindo
 
@@ -338,7 +360,6 @@ Veja [`CONTRIBUTING.md`](CONTRIBUTING.md). Issues e PRs bem-vindos.
 
 [Distribuído sob licença MIT](LICENSE).
 
-**USE APENAS EM ALVOS QUE VOCÊ TEM AUTORIZAÇÃO PARA TESTAR.** Recon ativo
-(probe, brute, InternetDB) constitui interação real com infraestrutura de
-terceiros. Os autores não se responsabilizam por uso indevido. Consulte leis
-locais (ex.: Lei 12.737/2012 - Carolina Dieckmann, CFAA nos EUA).
+**USE APENAS EM ALVOS QUE VOCÊ TEM AUTORIZAÇÃO PARA TESTAR.** Reconhecimento
+ativo constitui interação real com infraestrutura. Você é responsável por
+obter autorização e cumprir a legislação, os contratos e as políticas aplicáveis.
