@@ -1,0 +1,36 @@
+# Segredos e configurações locais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs, caches e artefatos
+*.log
+*.tmp
+*.cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+dist/
+build/
+coverage/
+
+# Amostras e dados potencialmente sensíveis
+samples/private/
+artifacts/private/
+captures/
+*.pcap
+*.pcapng
