@@ -41,6 +41,13 @@ Transformamos pesquisa ofensiva em conhecimento prático e defensável, combinan
 | **KNOWLEDGE** | Documentação, estudos de OPSEC, simulação de adversários e materiais educacionais. |
 | **DEFENSE** | Indicadores, regras de detecção e recomendações práticas de mitigação. |
 
+## Projetos públicos
+
+| Projeto | Descrição |
+|---|---|
+| [00INFOSEC RECON](https://github.com/00infosec/00infosec-recon) | Framework de OSINT e mapeamento de superfície de ataque. |
+| [Guia para Estudantes de InfoSec](https://github.com/00infosec/guia-estudantes-infosec) | Fundamentos, trilha prática, laboratório seguro e projetos para portfólio. |
+
 ## Pilares
 
 <table>
