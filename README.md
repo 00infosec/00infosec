@@ -46,7 +46,7 @@ Transformamos pesquisa ofensiva em conhecimento prático e defensável, combinan
 | Projeto | Descrição |
 |---|---|
 | [00INFOSEC RECON](https://github.com/00infosec/00infosec-recon) | Framework de OSINT e mapeamento de superfície de ataque. |
-| [Guia Red Team para Estudantes](https://github.com/00infosec/guia-estudantes-infosec) | Fundamentos, metodologia ofensiva, OPSEC, laboratório seguro e projetos para portfólio. |
+| [Guia Red Team para Estudantes](https://github.com/00infosec/guia-estudantes-infosec) | Formação do iniciante absoluto ao Red Team avançado, com laboratório seguro e projetos. |
 
 ## Pilares
 
